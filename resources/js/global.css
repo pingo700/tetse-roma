@@ -1,0 +1,173 @@
+@tailwind base;
+  @tailwind components;
+  @tailwind utilities;
+
+  @layer base {
+    :root {
+      --background: 0 0% 100%;
+      --foreground: 20 14.3% 4.1%;
+      --card: 0 0% 100%;
+      --card-foreground: 20 14.3% 4.1%;
+      --popover: 0 0% 100%;
+      --popover-foreground: 20 14.3% 4.1%;
+      --primary: 24 9.8% 10%;
+      --primary-foreground: 60 9.1% 97.8%;
+      --secondary: 60 4.8% 95.9%;
+      --secondary-foreground: 24 9.8% 10%;
+      --muted: 60 4.8% 95.9%;
+      --muted-foreground: 25 5.3% 44.7%;
+      --accent: 60 4.8% 95.9%;
+      --accent-foreground: 24 9.8% 10%;
+      --destructive: 0 84.2% 60.2%;
+      --destructive-foreground: 60 9.1% 97.8%;
+      --border: 20 5.9% 90%;
+      --input: 20 5.9% 90%;
+      --ring: 20 14.3% 4.1%;
+      --radius: 0.5rem;
+      --chart-1: 12 76% 61%;
+      --chart-2: 173 58% 39%;
+      --chart-3: 197 37% 24%;
+      --chart-4: 43 74% 66%;
+      --chart-5: 27 87% 67%;
+    }
+
+    .dark {
+      --background: 20 14.3% 4.1%;
+      --foreground: 60 9.1% 97.8%;
+      --card: 20 14.3% 4.1%;
+      --card-foreground: 60 9.1% 97.8%;
+      --popover: 20 14.3% 4.1%;
+      --popover-foreground: 60 9.1% 97.8%;
+      --primary: 60 9.1% 97.8%;
+      --primary-foreground: 24 9.8% 10%;
+      --secondary: 12 6.5% 15.1%;
+      --secondary-foreground: 60 9.1% 97.8%;
+      --muted: 12 6.5% 15.1%;
+      --muted-foreground: 24 5.4% 63.9%;
+      --accent: 12 6.5% 15.1%;
+      --accent-foreground: 60 9.1% 97.8%;
+      --destructive: 0 62.8% 30.6%;
+      --destructive-foreground: 60 9.1% 97.8%;
+      --border: 12 6.5% 15.1%;
+      --input: 12 6.5% 15.1%;
+      --ring: 24 5.7% 82.9%;
+      --chart-1: 220 70% 50%;
+      --chart-2: 160 60% 45%;
+      --chart-3: 30 80% 55%;
+      --chart-4: 280 65% 60%;
+      --chart-5: 340 75% 55%;
+    }
+  }
+
+  @layer base {
+    * {
+      @apply border-border;
+    }
+    body {
+      @apply bg-background text-foreground;
+    }
+  }
+
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Crect width='256' height='256' fill='none'/%3E%3Cline x1='200' y1='56' x2='56' y2='200' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='16'/%3E%3Cline x1='200' y1='200' x2='56' y2='56' stroke='currentColor' stroke-linecap='round' stroke-linejoin='round' stroke-width='16'/%3E%3C/svg%3E");
+}
+
+
+/* ITEM QUANTITY STYLE */
+.quantity {
+  position: relative;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.quantity input {
+  background: none;
+  width: 60px;
+  height: 36px;
+  line-height: 1.65;
+  float: left;
+  display: block;
+  padding: 0;
+  margin: 0;
+  padding-left: 10px;
+  border: 1px solid rgb(38, 38, 38);
+  font-size: 1rem;
+  border-radius: 4px;
+}
+
+.quantity input:focus {
+  outline: 0;
+}
+
+.quantity-nav {
+  float: left;
+  height: 36px;
+}
+
+.quantity-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  border: none;
+  border-left: 1px solid rgb(38, 38, 38);
+  width: 21px;
+  text-align: center;
+  color: rgb(130, 130, 130);
+  font-size: 12px;
+  font-family: "FontAwesome" !important;
+  line-height: 1.5;
+  padding: 0;
+  background: none;
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+.quantity-button:active {
+  background: #EAEAEA;
+}
+
+.quantity-button.quantity-up {
+  position: absolute;
+  height: 50%;
+  top: 0;
+  border-bottom: 1px solid rgb(38, 38, 38);
+  font-family: "FontAwesome";
+  border-radius: 0 4px 0 0;
+  line-height: 1.6
+}
+
+.quantity-button.quantity-down {
+  position: absolute;
+  bottom: 0;
+  height: 50%;
+  font-family: "FontAwesome";
+  border-radius: 0 0 4px 0;
+}
+
+
+/* SIZE FIX */
+body {
+  zoom: 131%;
+}
+
+/* @media (max-width: 640px) {
+body {
+  zoom: 110%;
+}
+} */
